@@ -1,16 +1,21 @@
-let allH3 = Array.from(document.querySelector(".detils h2"));
-let allp = Array.from(document.querySelector(".detils p"));
 
 
-$(".detils h2").click(function(){
+
+
         
-        $(".detils p").slideUp(1000);
-         $(this).next().slideDown(1000);
+        // $(".detils p").slideUp(1000);
+        //  $(this).next().slideDown(1000);
+    
+
+       
+         $(".detils h2").click(function(){
+            $(this).next().slideToggle(1000);
+            $(".detils p").not($(this).next()).slideUp(1000);        
          
  })
 
 
-//  ===================================
+//  =============  NAV ======================
 $(".barIcon").css("left" , $(".navigation").outerWidth(true) + "px")
 $(".navigation").animate({left : `-${$(".navigation").outerWidth(true)}px`} ,1000)
  $(".barIcon").click(function(){
